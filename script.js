@@ -33,6 +33,30 @@ const init = function () {
   player1El.classList.remove('player--active');
 };
 init();
+//Setting Player1 name
+function changePlayerName1() {
+  const userName1 = prompt('Enter Player Name:');
+  if (userName1 && userName1.trim() !== '') {
+    const player1NameElement = document.getElementById('name0');
+    player1NameElement.innerHTML = ` ${userName1}`;
+  } else {
+    // If no valid name was entered, show an alert
+    alert("No valid name entered. Player1's name remains unchanged.");
+  }
+}
+changePlayerName1();
+//Setting Player2 name
+function changePlayerName2() {
+  const userName2 = prompt('Enter Player-2 Name:');
+  if (userName2 && userName2.trim() !== '') {
+    const player2NameElement = document.getElementById('name1');
+    player2NameElement.innerHTML = ` ${userName2}`;
+  } else {
+    // If no valid name was entered, show an alert
+    alert("No valid name entered. Player1's name remains unchanged.");
+  }
+}
+changePlayerName2();
 
 const switchPlayer = function () {
   document.getElementById(`current--${activePlayer}`).textContent = 0;
